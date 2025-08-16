@@ -86,7 +86,29 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.container {
+#about .container {
+  display: flex;
+  align-items: center;   /* aligne verticalement */
+  gap: 20px;  /* espace entre les deux éléments */
+}
+
+#about p {
+  flex: 1; /* prend toute la largeur disponible */
+}
+
+#about img {
+  max-width: 300px; /* limite la taille de l'image */
+  height: auto;
+  border-radius: 50%; /* optionnel, pour arrondir les coins */
+}
+
+
+h2 {
+  color:rgb(34, 145, 130) ;
+  text-shadow: 0 0px 20px rgb(34, 145, 130);
+}
+
+.container {  
   max-width: 900px;
   margin: 0 auto;
   padding: 20px;
@@ -114,9 +136,7 @@ header {
   background: none;
   border: 2px solid var(--header-text);
   color: var(--header-text);
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  border-radius: 10px;
   font-size: 1.2em;
   cursor: pointer;
   display: flex;
@@ -172,6 +192,7 @@ nav ul li a:hover {
 
 #about {
   animation-delay: 1s;
+  display: flex;
 }
 
 #skills {
@@ -274,6 +295,7 @@ h1, h2, h3 {
 
 .contact-methods {
   display: flex;
+  border: 0cap;
   flex-direction: column;
   gap: 20px;
   margin-top: 30px;
@@ -281,7 +303,6 @@ h1, h2, h3 {
 
 .contact-item {
   display: flex;
-  border: 0cap;
   align-items: center;
   padding: 15px 20px;
   background-color: var(--card-bg);
@@ -450,6 +471,6 @@ footer {
 /* Responsive */
 @media (max-width: 600px) {
   nav ul {
-    flex-direction: column;
+    flex-direction: inherit;
   }
 }
